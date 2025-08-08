@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "netsec-audit-tool"
+version = "0.1.0"
+description = "Authorized network video device audit helper with nmap, ONVIF probe, and basic image quality checks."
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [
+  {name = "Your Name", email = "you@example.com"}
+]
+dependencies = [
+  "opencv-python",
+  "numpy",
+  "scikit-image",
+  "requests",
+  "scapy",
+]
+
+[project.urls]
+Homepage = "https://github.com/yourname/netsec_audit_tool"
+Issues = "https://github.com/yourname/netsec_audit_tool/issues"
+
+[project.scripts]
+netsec-audit = "netsec_audit.cli:main"
